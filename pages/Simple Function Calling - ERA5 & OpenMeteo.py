@@ -23,16 +23,14 @@ if 'key' not in st.session_state:
   st.session_state.key = None
 
 
-st.session_state.endpoint = st.text_input('Endpoint')
-st.session_state.key = st.text_input('Openai Key')
 
 
 
 # Initialize the AzureOpenAI capabilities
 from openai import AzureOpenAI
 client = AzureOpenAI(
-  azure_endpoint = st.session_state.endpoint, 
-  api_key = st.session_state.key,  
+  azure_endpoint = st.secrets['AZURE_ENDPOINT'], 
+  api_key = st.secrets['OPENAI_API_KEY'],  
   api_version="2024-02-01"
 )
 
