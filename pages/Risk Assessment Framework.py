@@ -154,7 +154,7 @@ def describe_graphs(json, request):
         }
     )
     response = client.chat.completions.create(
-        model = os.environ['GPT_DEPLOYMENT_NAME'],
+        model = "llm-gpt35",
         messages=messages,
     )
 
