@@ -10,3 +10,4 @@ openai
 python-dotenv
 plotly
 s3fs
+xarray
