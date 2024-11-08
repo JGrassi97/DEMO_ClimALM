@@ -129,7 +129,7 @@ available_functions = {
 def conversation_step(messages, tools=None, tool_choice=None):
 
     response = client.chat.completions.create(
-        model = os.environ['GPT_DEPLOYMENT_NAME'],
+        model = "llm-gpt35",
         messages=messages,
         tools=tools,
         tool_choice=tool_choice,
