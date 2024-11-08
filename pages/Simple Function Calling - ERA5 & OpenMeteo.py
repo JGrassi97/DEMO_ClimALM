@@ -15,7 +15,12 @@ warnings.filterwarnings("ignore")
 
 # Insert here the path for the credentials.env file
 from dotenv import load_dotenv
-load_dotenv("../credentials.env")
+
+uploaded_file = st.file_uploader("Choose a .env file")
+
+if uploaded_file is None:
+  st.stop()
+load_dotenv(uploaded_file)
 
 # Initialize the AzureOpenAI capabilities
 from openai import AzureOpenAI
