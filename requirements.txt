@@ -9,3 +9,4 @@ streamlit-folium
 openai
 python-dotenv
 plotly
+s3fs
