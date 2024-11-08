@@ -52,23 +52,20 @@ with st.container(border=True):
 st.divider()
 st.subheader('Select the variables')
 
+azure_endpoint = st.secrets['AZURE_ENDPOINT']
+openai_api_key = st.secrets['OPENAI_API_KEY']
 
-#Setting AI parameters
-openai_deployment_name = os.getenv("GPT_DEPLOYMENT_NAME")
-openai_api_key = os.getenv("OPENAI_API_KEY")
-openai_api_version = os.getenv("OPENAI_API_VERSION")
-azure_endpoint = os.getenv("AZURE_ENDPOINT")
 
-llm = AzureChatOpenAI(deployment_name=openai_deployment_name, openai_api_version=openai_api_version,
+llm = AzureChatOpenAI(deployment_name="llm-gpt35", openai_api_version="2024-02-01",
                             openai_api_key=openai_api_key, azure_endpoint=azure_endpoint, temperature=0)
 
 
 
 # Initialize the AzureOpenAI client
 client = AzureOpenAI(
-  azure_endpoint = os.environ['AZURE_ENDPOINT'], 
-  api_key = os.environ['OPENAI_API_KEY'],  
-  api_version=os.environ['OPENAI_API_VERSION']
+  azure_endpoint = st.secrets['AZURE_ENDPOINT'], 
+  api_key = st.secrets['OPENAI_API_KEY'],  
+  api_version="2024-02-01"
 )
 
 
