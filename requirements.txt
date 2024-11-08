@@ -10,5 +10,5 @@ openai
 python-dotenv
 plotly
 s3fs
-xarray
+xarray['complete']
 langchain_openai
