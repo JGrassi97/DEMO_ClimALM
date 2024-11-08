@@ -5,3 +5,7 @@ matplotlib
 python-docx
 openpyxl
 stqdm
+streamlit-folium
+openai
+dotenv
+plotly
