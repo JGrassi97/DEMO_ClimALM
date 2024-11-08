@@ -19,7 +19,6 @@ from dotenv import load_dotenv
 
 os.environ['AZURE_ENDPOINT'] = st.text_input('Endpoint')
   
-load_dotenv(uploaded_file)
 
 # Initialize the AzureOpenAI capabilities
 from openai import AzureOpenAI
