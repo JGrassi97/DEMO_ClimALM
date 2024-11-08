@@ -24,8 +24,8 @@ if 'key' not in st.session_state:
 
 
 if st.session_state.messages is None:
-  st.session_state['endpoint'] = st.text_input('Endpoint')
-  st.session_state['key'] = st.text_input('Openai Key')
+  st.session_state.endpoint = st.text_input('Endpoint')
+  st.session_state.key = st.text_input('Openai Key')
 
 else:
   
