@@ -13,19 +13,6 @@ warnings.filterwarnings("ignore")
 
 # -- GENERAL SETTINGS
 
-# Insert here the path for the credentials.env file
-from dotenv import load_dotenv
-
-if 'endpoint' not in st.session_state:
-  st.session_state.messages = None
-
-if 'key' not in st.session_state:
-  st.session_state.key = None
-
-
-
-
-
 # Initialize the AzureOpenAI capabilities
 from openai import AzureOpenAI
 client = AzureOpenAI(
