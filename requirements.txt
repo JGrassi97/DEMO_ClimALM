@@ -11,3 +11,4 @@ python-dotenv
 plotly
 s3fs
 xarray
+langchain_openai
