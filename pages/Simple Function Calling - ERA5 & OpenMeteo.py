@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 
 
 os.environ['AZURE_ENDPOINT'] = st.text_input('Endpoint')
+os.environ['OPENAI_API_KEY']
   
 
 # Initialize the AzureOpenAI capabilities
@@ -25,7 +26,7 @@ from openai import AzureOpenAI
 client = AzureOpenAI(
   azure_endpoint = os.environ['AZURE_ENDPOINT'], 
   api_key = os.environ['OPENAI_API_KEY'],  
-  api_version=os.environ['OPENAI_API_VERSION']
+  api_version="2024-02-01"
 )
 
 # Page settings
