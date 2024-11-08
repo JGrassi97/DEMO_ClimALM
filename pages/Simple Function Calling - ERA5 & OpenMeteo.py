@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 
 
 os.environ['AZURE_ENDPOINT'] = st.text_input('Endpoint')
-os.environ['OPENAI_API_KEY']
+os.environ['OPENAI_API_KEY'] = st.text_input('Openai Key')
   
 
 # Initialize the AzureOpenAI capabilities
