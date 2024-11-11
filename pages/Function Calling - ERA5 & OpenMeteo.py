@@ -21,10 +21,11 @@ client = AzureOpenAI(
   api_version="2024-02-01"
 )
 
-# Page settings
-st.set_page_config(layout="wide")
-st.title("Weather Data Analysis with GPT-3.5 & Open-Meteo API")
 
+# Set the page configuration
+st.set_page_config(page_title='Function Calling ERA5', page_icon='🌍', layout='wide')
+
+st.title('Function Calling - ERA5')
 # Initialize chat history as streamlit session states
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "system", "content": "Retrieve the past weather data for the given location from the ERA5 dataset, and comment."},
