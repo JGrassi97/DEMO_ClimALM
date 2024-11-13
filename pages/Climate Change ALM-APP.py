@@ -237,7 +237,7 @@ with col1:
             st.subheader('Proposed analysis:')
             st.write(st.session_state.proposed_analysis)
 
-if st.button('Loada data'):
+if st.button('Load data'):
     retrieve_climate_data(st.session_state.variables, st.session_state.sources, st.session_state.scenarios, st.session_state.bands, st.session_state.latitude, st.session_state.longitude, st.session_state.climatology)
 
 
