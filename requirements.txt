@@ -12,4 +12,3 @@ plotly
 s3fs
 xarray[complete]
 langchain_openai
-json
